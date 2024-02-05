@@ -1,13 +1,14 @@
 import React from "react";
 import './SignUpForm.css';
-import { IoIosSend } from "react-icons/io";
-import { GiConfirmed } from "react-icons/gi";
-import { MdOutgoingMail, MdOutlineAppRegistration  } from "react-icons/md";
+import { IoIosSend } from "react-icons/io"; 
+import { MdOutgoingMail, MdOutlineAppRegistration, MdConfirmationNumber  } from "react-icons/md";
 import { FaLock, FaUser, FaAddressCard, FaPhoneSquareAlt } from "react-icons/fa";
+import { SiGnuprivacyguard } from "react-icons/si";
 const SignUpForm = ()=>{
     return(
         <div className="wrap">
             <h1>Sign Up</h1>
+            <form href="#">
             <div className="container">
             <div className="input-field">
                 <input type="text" placeholder="Username" required/>
@@ -35,10 +36,12 @@ const SignUpForm = ()=>{
             </div>
             <div className="input-field">
                 <input type="password" placeholder="Confirm Password" required/>
-                <GiConfirmed  className="icon"/>
+                <SiGnuprivacyguard  className="icon"/>
+            </div>
             </div>
             <button type="submit">Register <IoIosSend className="icon"/></button>
-            </div>
+            </form>
+            <p>Already have an Account ? <a href="#">Login Here</a></p>
         </div>
     )
 }

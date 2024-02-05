@@ -1,17 +1,21 @@
 .wrap{
     width: 420px;
     background-color: #fff;
-    padding: 10px;
-    border-radius: 20px;
+    border: 2px solid rgba(255,255,255,.2);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    padding: 25px;
+    border-radius: 10px;
     color: #714d69;
 }
 .wrap .container{
     padding: 10px;
-    max-height: 400px;
+    max-height: 50vh;
     overflow-y: auto;
+    border-radius: 10px;
+    background-color: rgb(253, 249, 249);
 }
 ::-webkit-scrollbar {
-    width: 12px; /* Set the width of the scrollbar */
+    width: 8px; /* Set the width of the scrollbar */
   }
   
 ::-webkit-scrollbar-thumb {
@@ -28,32 +32,34 @@ border-radius: 6px; /* Set the border radius of the thumb */
     position: relative;
     width: 100%;
     height: 50px;
-    margin: 10px 0;
+    margin: 20px 0;
+}
+.input-field input::placeholder{
+    color: #714d69;
 }
 .wrap input{
     background: transparent;
     border: none;
     outline: none;
     border: 2px solid #714d69;
+    color: #714d69;
     border-radius: 40px;
-    padding: 20px;
+    padding: 20px 45px 20px 20px;
     width: 100%;
     height: 100%;
 }
-.container button{
+.wrap button{
     width: 100%;
     height: 50px;
     font-size: 20px;
     margin: 10px 0;
     background: #714d69;
     color: white;
-    border: none;
-    /* border: 2px solid white; */
+    border: none; 
     border-radius: 40px;
     transition-duration: 0.4s;
 }
-.container button:hover{  
-    /* border: 2px solid #714d69;  */
+.wrap button:hover{   
     background: #604159;
     color: white;
     cursor: pointer;  
@@ -64,9 +70,21 @@ border-radius: 6px; /* Set the border radius of the thumb */
     top: 50%;
     transform: translateY(-50%);
 }
+.wrap p{
+    text-align: center;
+    width: 100%;
+}
+.wrap p a{
+    text-decoration: none;
+    color: #714d69;
+    font-weight: 700;
+}
+.wrap p a:hover{
+    text-decoration: underline;
+} 
 @media (max-width: 600px) {
     .wrap{
         width: 95vw;
         background-color: #fff; 
     }
-  }
+}
