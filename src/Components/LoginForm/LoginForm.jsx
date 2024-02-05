@@ -19,7 +19,7 @@ const LoginForm =() =>{
                     <label>
                         <input type="checkbox"/>Remember Me
                     </label>
-                    <a href="#">Forgot Password ?</a>
+                    <a href="#">Lost Password ?</a>
                 </div>
                 <button type="submit">Login <IoLogIn className="icon"/></button>
                 <div className="register-link">

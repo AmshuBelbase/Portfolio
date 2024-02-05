@@ -4,8 +4,8 @@ import SignUpForm from './Components/SignUpForm/SignUpForm';
 function App() {
   return (
     <div>
-       {/* <LoginForm/> */}
-       <SignUpForm/>
+       <LoginForm/>
+       {/* <SignUpForm/> */}
     </div>
   );
 }
