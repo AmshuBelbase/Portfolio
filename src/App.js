@@ -1,11 +1,13 @@
 import LoginForm from './Components/LoginForm/LoginForm';
 import SignUpForm from './Components/SignUpForm/SignUpForm';
+import HomePage from './Components/HomePage/HomePage';
 
 function App() {
   return (
     <div>
-       <LoginForm/>
-       {/* <SignUpForm/> */}
+      <HomePage/>
+      {/* <LoginForm/> */}
+      {/* <SignUpForm/>  */}
     </div>
   );
 }

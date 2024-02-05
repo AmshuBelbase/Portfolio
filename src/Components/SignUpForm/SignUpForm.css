@@ -25,8 +25,7 @@ border-radius: 6px; /* Set the border radius of the thumb */
 .wrap h1{
     font-size: 36px;
     margin: 15px;
-    text-align: center;
-    
+    text-align: center; 
 }
 .wrap .input-field{
     position: relative;
