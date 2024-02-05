@@ -38,7 +38,7 @@
     top: 50%;
     transform: translateY(-50%);
     font-size: 16px;
-}
+} 
 .wrapper .remember-forgot{
     display: flex;
     justify-content: space-between;
@@ -75,6 +75,9 @@
     /* border: 2px solid #714d69;  */
     background: #604159;
     color: white; 
+}
+.wrapper button:hover .icon{
+    transform: translateX(5px);
 }
 .wrapper .register-link{
     font-size: 14.5px;
