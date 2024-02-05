@@ -5,8 +5,8 @@ import HomePage from './Components/HomePage/HomePage';
 function App() {
   return (
     <div>
-      <HomePage/>
-      {/* <LoginForm/> */}
+      {/* <HomePage/> */}
+      <LoginForm/>
       {/* <SignUpForm/>  */}
     </div>
   );
