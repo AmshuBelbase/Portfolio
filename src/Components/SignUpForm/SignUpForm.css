@@ -73,12 +73,12 @@ border-radius: 6px; /* Set the border radius of the thumb */
     text-align: center;
     width: 100%;
 }
-.wrap p a{
+.wrap p label{
     text-decoration: none;
     color: #714d69;
     font-weight: 700;
 }
-.wrap p a:hover{
+.wrap p label:hover{
     text-decoration: underline;
     cursor: pointer;
 } 

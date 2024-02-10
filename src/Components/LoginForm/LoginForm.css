@@ -50,12 +50,13 @@
     accent-color: #714d69;
     margin-right: 5px;
 }
-.remember-forgot a{
+.remember-forgot .myLabel{
     color: #714d69;
     text-decoration: none;
 }
-.remember-forgot a:hover{
+.remember-forgot .myLabel:hover{
     text-decoration: underline;
+    cursor: pointer;
 }
 .wrapper button{
     width: 100%;
@@ -72,8 +73,7 @@
     transition-duration: 0.4s;
 }
 .wrapper button:hover{  
-    cursor: pointer;    
-    /* border: 2px solid #714d69;  */
+    cursor: pointer;     
     background: #604159;
     color: white; 
 }
@@ -83,14 +83,14 @@
 .wrapper .register-link{
     font-size: 14.5px;
     text-align: center;
-    margin: 20px 0 15px;
-}
-.register-link p a{
+    margin: 20px 0 15px; 
+}  
+.register-link p label{
     color: #714d69;
     text-decoration: none;
     font-weight: 700;
 }
-.register-link p a:hover{ 
+.register-link p label:hover{ 
     text-decoration: underline;
     cursor: pointer;
 }
@@ -98,5 +98,5 @@
     .wrapper{
         width: 95vw;
         background-color: #fff; 
-    }
+    } 
 }

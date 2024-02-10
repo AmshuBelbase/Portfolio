@@ -140,8 +140,8 @@ const SignUpForm = () => {
         Create <IoIosSend className="icon" />
       </button>
       <p>
-        Already have an Account ?{" "}
-        <a onClick={() => navigate("/login")}>Login Here</a>
+        Already have an Account ?
+        <label onClick={() => navigate("/login")}> Login Here</label>
       </p>
     </div>
   );

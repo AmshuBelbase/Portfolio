@@ -6,7 +6,7 @@ import { FaLock } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 import axios from "axios";
-const LoginForm = () => {
+const LoginForm = ({ setLoginUser }) => {
   const navigate = useNavigate();
 
   const [userLog, setLog] = useState({
@@ -32,47 +32,45 @@ const LoginForm = () => {
   };
   return (
     <div className="wrapper">
-      <form action="#">
-        <h1>Log In</h1>
-        <div className="input-box">
-          <input
-            type="email"
-            name="email"
-            value={userLog.email}
-            onChange={handleLogChange}
-            placeholder="Email"
-            required
-          />
-          <MdOutgoingMail className="icon" />
-        </div>
-        <div className="input-box">
-          <input
-            type="password"
-            name="password"
-            value={userLog.password}
-            onChange={handleLogChange}
-            placeholder="Password"
-            required
-          />
-          <FaLock className="icon" />
-        </div>
-        <div className="remember-forgot">
-          <label>
-            <input type="checkbox" />
-            Remember Me
-          </label>
-          <a href="#">Lost Password ?</a>
-        </div>
-        <button type="submit" onClick={login}>
-          Log In <IoLogIn className="icon" />
-        </button>
-        <div className="register-link">
-          <p>
-            Don't have an account ?{" "}
-            <a onClick={() => navigate("/create")}>Create Account</a>
-          </p>
-        </div>
-      </form>
+      <h1>Log In</h1>
+      <div className="input-box">
+        <input
+          type="email"
+          name="email"
+          value={userLog.email}
+          onChange={handleLogChange}
+          placeholder="Email"
+          required
+        />
+        <MdOutgoingMail className="icon" />
+      </div>
+      <div className="input-box">
+        <input
+          type="password"
+          name="password"
+          value={userLog.password}
+          onChange={handleLogChange}
+          placeholder="Password"
+          required
+        />
+        <FaLock className="icon" />
+      </div>
+      <div className="remember-forgot">
+        <label>
+          <input type="checkbox" />
+          Remember Me
+        </label>
+        <label className="myLabel">Lost Password ?</label>
+      </div>
+      <button type="submit" onClick={login}>
+        Log In <IoLogIn className="icon" />
+      </button>
+      <div className="register-link">
+        <p>
+          Don't have an account ?{" "}
+          <label onClick={() => navigate("/create")}>Sign Up</label>
+        </p>
+      </div>
     </div>
   );
 };
