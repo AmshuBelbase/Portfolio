@@ -45,9 +45,10 @@ const SignUpForm = () => {
       password &&
       password === cpassword
     ) {
-      axios
-        .post("http://localhost:9002/register", user)
-        .then((res) => alert(res.data.message));
+      axios.post("http://10.3.116.24:9002/register", user).then((res) => {
+        alert(res.data.message);
+        navigate("/login");
+      });
     } else {
       alert("You Entered Something Wrong ❌");
     }

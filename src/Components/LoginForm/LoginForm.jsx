@@ -23,9 +23,11 @@ const LoginForm = ({ setLoginUser }) => {
   const login = () => {
     const { email, password } = userLog;
     if (email && password) {
-      axios
-        .post("http://localhost:9002/login", userLog)
-        .then((res) => alert(res.data.message));
+      axios.post("http://10.3.116.24:9002/login", userLog).then((res) => {
+        alert(res.data.message);
+        setLoginUser(res.data.user);
+        navigate("/");
+      });
     } else {
       alert("You Entered Something Wrong ❌");
     }

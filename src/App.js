@@ -22,7 +22,7 @@ function App() {
             path="/"
             element={
               user && user._id ? (
-                <HomePage />
+                <HomePage setLoginUser={setLoginUser} />
               ) : (
                 <LoginForm setLoginUser={setLoginUser} />
               )
