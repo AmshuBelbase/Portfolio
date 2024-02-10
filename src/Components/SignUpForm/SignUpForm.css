@@ -80,6 +80,7 @@ border-radius: 6px; /* Set the border radius of the thumb */
 }
 .wrap p a:hover{
     text-decoration: underline;
+    cursor: pointer;
 } 
 .wrap button:hover .icon{
     transform: translate(5px, -5px);

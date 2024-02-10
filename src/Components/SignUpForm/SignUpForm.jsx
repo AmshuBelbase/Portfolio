@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import "./SignUpForm.css";
 import { IoIosSend } from "react-icons/io";
-import { MdOutgoingMail, MdOutlineAppRegistration } from "react-icons/md";
+import {
+  MdCreate,
+  MdOutgoingMail,
+  MdOutlineAppRegistration,
+} from "react-icons/md";
 import {
   FaLock,
   FaUser,
@@ -10,8 +14,9 @@ import {
 } from "react-icons/fa";
 import { SiGnuprivacyguard } from "react-icons/si";
 import axios from "axios";
-
+import { useNavigate } from "react-router-dom";
 const SignUpForm = () => {
+  const navigate = useNavigate();
   const [user, setUser] = useState({
     username: "",
     register: "",
@@ -38,19 +43,20 @@ const SignUpForm = () => {
       address &&
       email &&
       password &&
-      password == cpassword
+      password === cpassword
     ) {
-      alert("Posted");
       axios
         .post("http://localhost:9002/register", user)
-        .then((res) => console.log(res));
+        .then((res) => alert(res.data.message));
     } else {
-      alert("You Entered Something Wrong");
+      alert("You Entered Something Wrong ❌");
     }
   };
   return (
     <div className="wrap">
-      <h1>Sign Up</h1>
+      <h1>
+        Register <MdCreate />
+      </h1>
       <div className="container">
         <div className="input-field">
           <input
@@ -131,10 +137,11 @@ const SignUpForm = () => {
         </div>
       </div>
       <button type="submit" onClick={register}>
-        Register <IoIosSend className="icon" />
+        Create <IoIosSend className="icon" />
       </button>
       <p>
-        Already have an Account ? <a href="#">Login Here</a>
+        Already have an Account ?{" "}
+        <a onClick={() => navigate("/login")}>Login Here</a>
       </p>
     </div>
   );

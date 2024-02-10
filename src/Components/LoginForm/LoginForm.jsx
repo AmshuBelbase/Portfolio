@@ -3,8 +3,12 @@ import "./LoginForm.css";
 import { IoLogIn } from "react-icons/io5";
 import { MdOutgoingMail } from "react-icons/md";
 import { FaLock } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+
 import axios from "axios";
 const LoginForm = () => {
+  const navigate = useNavigate();
+
   const [userLog, setLog] = useState({
     email: "",
     password: "",
@@ -17,7 +21,14 @@ const LoginForm = () => {
     });
   };
   const login = () => {
-    axios.post("http://localhost:9002/login", userLog);
+    const { email, password } = userLog;
+    if (email && password) {
+      axios
+        .post("http://localhost:9002/login", userLog)
+        .then((res) => alert(res.data.message));
+    } else {
+      alert("You Entered Something Wrong ❌");
+    }
   };
   return (
     <div className="wrapper">
@@ -57,7 +68,8 @@ const LoginForm = () => {
         </button>
         <div className="register-link">
           <p>
-            Don't have an account ? <a href="#">Register Here</a>
+            Don't have an account ?{" "}
+            <a onClick={() => navigate("/create")}>Create Account</a>
           </p>
         </div>
       </form>
